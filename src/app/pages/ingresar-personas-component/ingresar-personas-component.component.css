@@ -1,0 +1,46 @@
+.fondoFormulario {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgb(38, 38, 188);
+}
+
+.formulario {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    background-color: white;
+    padding: 40px;
+    padding-bottom: 70px;
+    border-radius: 50px;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+input {
+    display: block;
+    margin-bottom: 10px;
+    width: 190px;
+    border-radius: 10px;
+    padding: 5px;
+
+}
+
+select{
+    width: 200px;
+    border-radius: 10px;
+    padding: 5px;
+}
+#tituloForm{
+    padding: 15px;
+    background-color: orange;
+    text-align: center;
+    border-radius: 20px;
+}
+#botonSubir{
+    margin-top: 10px;
+}
