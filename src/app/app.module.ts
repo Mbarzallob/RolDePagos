@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { IngresarPersonasComponentComponent } from './pages/ingresar-personas-component/ingresar-personas-component.component';
 import { PaginaPrincipalComponent } from './pages/pagina-principal/pagina-principal.component';
 import { ConsultarUsuarioComponent } from './pages/consultar-usuario/consultar-usuario.component';
+import { RolPagosComponent } from './pages/rol-pagos/rol-pagos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IngresarPersonasComponentComponent,
     PaginaPrincipalComponent,
-    ConsultarUsuarioComponent
+    ConsultarUsuarioComponent,
+    RolPagosComponent
   ],
   imports: [
     BrowserModule,
