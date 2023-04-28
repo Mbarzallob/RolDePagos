@@ -1,0 +1,60 @@
+.options {
+    position: absolute;
+    background-color: rgb(38, 38, 188);
+    width: 50%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.background {
+    position: absolute;
+    background-image: url(https://img.freepik.com/vector-gratis/patron-lineas-abstractas-planas-lineales_23-2148939520.jpg?w=996&t=st=1682634036~exp=1682634636~hmac=15252154a92e832126247bb458bb5a420e14c76e03a765050a6064cb604da0cb);
+    width: 50%;
+    float: right;
+    top: 0;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    opacity: 15%;
+}
+
+.form {
+    margin-top: 25%;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    justify-items: center;
+}
+
+button {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 7px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+
+.bottons {
+    margin-left: 30%;
+    margin-right: 30%;
+
+}
+
+
+#titulo {
+    background-color: orange;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 20px;
+    color: white;
+    margin-bottom: 50px;
+    border: solid black 3px;
+}
