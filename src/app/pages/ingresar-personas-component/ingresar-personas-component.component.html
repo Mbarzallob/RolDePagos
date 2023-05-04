@@ -3,26 +3,28 @@
     <div class="formulario">
 
         <h2 id="tituloForm">Ingresar Persona</h2>
+        <form id="formIngresar">
+            <input type="text" placeholder="Nombre" id="nombre">
+            <input type="text" placeholder="Apellido" id="apellido">
+            <input type="text" placeholder="Username" id="username">
+            <input type="password" placeholder="Contraseña" id="password">
+            <input type="text" placeholder="Telefono" id="telefono">
+            <input type="text" placeholder="Direccion" id="direccion">
+            <input type="text" placeholder="Correo Electronico" id="correo">
+            <select name="Cargos">
+                <option disabled selected>Elegir Cargos</option>
+                <option value="">1: Gerente</option>
+                <option value="">2: Programador</option>
+                <option value="">3: Contador</option>
+                <option value="">4: Recursos Humanos</option>
+                <option value="">5: Administradro de base de datos</option>
 
-        <input type="text" placeholder="Nombre">
-        <input type="text" placeholder="Apellido">
-        <input type="text" placeholder="Username">
-        <input type="password" placeholder="Contraseña">
-        <input type="text" placeholder="Telefono">
-        <input type="text" placeholder="Direccion">
-        <input type="text" placeholder="Correo Electronico">
-        <select name="Cargos" >
-            <option disabled selected>Elegir Cargos</option>
-            <option value="">1: Gerente</option>
-            <option value="">2: Programador</option>
-            <option value="">3: Contador</option>
-            <option value="">4: Recursos Humanos</option>
-            <option value="">5: Administradro de base de datos</option>
-
-        </select>
-        <input type="submit" id="botonSubir" routerLink="/">
+            </select>
+            <input type="submit" id="botonSubir"><!--routerLink="/"-->
+        </form>
 
 
     </div>
 
 </div>
+
