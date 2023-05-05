@@ -7,6 +7,7 @@ import { IngresarPersonasComponentComponent } from './pages/ingresar-personas-co
 import { PaginaPrincipalComponent } from './pages/pagina-principal/pagina-principal.component';
 import { ConsultarUsuarioComponent } from './pages/consultar-usuario/consultar-usuario.component';
 import { RolPagosComponent } from './pages/rol-pagos/rol-pagos.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,11 +15,13 @@ import { RolPagosComponent } from './pages/rol-pagos/rol-pagos.component';
     IngresarPersonasComponentComponent,
     PaginaPrincipalComponent,
     ConsultarUsuarioComponent,
-    RolPagosComponent
+    RolPagosComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
