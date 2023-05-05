@@ -1,5 +1,5 @@
 import { Component, ViewChild , OnInit} from '@angular/core';
-import {Persona,PersonaService} from '../../SERVICES/persona.service'
+import {Persona,PersonaService, Usuario} from '../../SERVICES/persona.service'
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-ingresar-personas-component',
@@ -19,6 +19,13 @@ export class IngresarPersonasComponentComponent implements OnInit {
       telefono:''
 
     }
+
+    usuario: Usuario={
+      usuario:'',
+      contrasena:''
+    }
+
+
       constructor(private PersonaService: PersonaService, private router:Router){}
       ngOnInit(): void {
         
@@ -26,10 +33,23 @@ export class IngresarPersonasComponentComponent implements OnInit {
 
 
       agregar(){
-        this.PersonaService.addPersonas(this.persona).subscribe();
+        this.PersonaService.addPersonas(this.persona)
+          .toPromise()
+          .then(() => {
+            return this.PersonaService.addUsuario(this.usuario).toPromise();
+          })
+          .then(() => {
+            this.router.navigate(['/']);
+          })
+          .catch(error => {
+            console.error(error);
+          });
+    }
+    
+    
 
-        this.router.navigate(['/']);
-      }
+    
+
 
      
   

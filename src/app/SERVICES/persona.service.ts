@@ -6,6 +6,8 @@ import {HttpClient} from '@angular/common/http'
 export class PersonaService {
   url='/api'
 
+  urlUsuario='/usuario'
+
   constructor(private http: HttpClient) { }
 
 
@@ -18,6 +20,17 @@ export class PersonaService {
   addPersonas(persona: Persona){
     return this.http.post(this.url, persona);
   }
+
+  getUsuario(){
+    return this.http.get(this.urlUsuario);
+  }
+
+
+  addUsuario(usuario: Usuario){
+    return this.http.post(this.urlUsuario, usuario);
+  }
+
+
 }
 
 export interface Persona {
@@ -30,3 +43,7 @@ export interface Persona {
   id_cargo?:number
 
 }
+ export interface Usuario {
+  usuario?:string,
+  contrasena?:string
+ }
