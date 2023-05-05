@@ -10,13 +10,22 @@
                 <th>Telefono</th>
                 <th>Correo</th>
                 <th>CargoId</th>
-    
+
             </tr>
         </thead>
-    
-    
+        <tbody>
+            <tr *ngFor="let persona of ListaPersonas">
+                <td>{{persona.nombre}}</td>
+                <td>{{persona.apellido}}</td>
+                <td>{{persona.direccion}}</td>
+                <td>{{persona.telefono}}</td>
+                <td>{{persona.correo_electronico}}</td>
+                <td>{{persona.id_cargo}}</td>
+            </tr>
+
+
+        </tbody>
+
     </table>
 
 </div>
-
-

@@ -8,6 +8,7 @@ import { PaginaPrincipalComponent } from './pages/pagina-principal/pagina-princi
 import { ConsultarUsuarioComponent } from './pages/consultar-usuario/consultar-usuario.component';
 import { RolPagosComponent } from './pages/rol-pagos/rol-pagos.component';
 import {HttpClientModule} from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {HttpClientModule} from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

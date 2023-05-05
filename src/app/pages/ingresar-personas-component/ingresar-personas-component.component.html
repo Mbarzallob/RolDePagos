@@ -4,22 +4,22 @@
 
         <h2 id="tituloForm">Ingresar Persona</h2>
         <form id="formIngresar">
-            <input type="text" placeholder="Nombre" id="nombre">
-            <input type="text" placeholder="Apellido" id="apellido">
-            <input type="text" placeholder="Username" id="username">
-            <input type="password" placeholder="Contraseña" id="password">
-            <input type="text" placeholder="Telefono" id="telefono">
-            <input type="text" placeholder="Direccion" id="direccion">
-            <input type="text" placeholder="Correo Electronico" id="correo">
-            <select name="Cargos">
+            <input name="1" [(ngModel)]="persona.nombre" type="text" placeholder="Nombre" id="nombre" >
+            <input name="2" [(ngModel)]="persona.apellido" type="text" placeholder="Apellido" id="apellido">
+            <input name="3"  type="text" placeholder="Username" id="username">
+            <input name="4"  type="password" placeholder="Contraseña" id="password">
+            <input name="5" [(ngModel)]="persona.telefono" type="text" placeholder="Telefono" id="telefono">
+            <input name="6" [(ngModel)]="persona.direccion" type="text" placeholder="Direccion" id="direccion">
+            <input name="7" [(ngModel)]="persona.correo_electronico" type="text" placeholder="Correo Electronico" id="correo">
+            <select name="Cargos" [(ngModel)]="persona.id_cargo">
                 <option disabled selected>Elegir Cargos</option>
-                <option value="1">1: Gerente</option>
-                <option value="2">2: Programador</option>
-                <option value="3">3: Contador</option>
-                <option value="4">4: Recursos Humanos</option>
-                <option value="5">5: Administradro de base de datos</option>
+                <option  value="1" >1: Gerente</option>
+                <option  value="2" >2: Programador</option>
+                <option  value="3" >3: Contador</option>
+                <option  value="4" >4: Recursos Humanos</option>
+                <option  value="5" >5: Administradro de base de datos</option>
             </select>
-            <input type="submit" id="botonSubir"><!--routerLink="/"-->
+            <input (click)="agregar()"   type="submit" id="botonSubir"><!--routerLink="/"-->
         </form>
 
 
