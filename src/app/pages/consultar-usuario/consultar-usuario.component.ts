@@ -10,7 +10,6 @@ import { Router } from '@angular/router';
 export class ConsultarUsuarioComponent {
   usuario= ''
   contrasena =''
-  isLoggedIn = false;
   constructor(private LoginServicio: LoginServicioService, private router: Router){}
 
   login() {
@@ -18,7 +17,6 @@ export class ConsultarUsuarioComponent {
       response => {
         console.log("Inicio de sesión exitoso");
         this.router.navigate(['/rolPagos'])
-        this.isLoggedIn = true
       },
       error => {
         console.log(error);
