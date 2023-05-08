@@ -49,3 +49,16 @@ select {
     width: 200px;
     background-color: orange;
 }
+#botonPrueba{
+    position: absolute;
+    display: inline-block;
+    left: 10px;
+    bottom: 10px;
+    background-color: orange;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    padding: 5px 10px 5px 10px;
+    font-size: 10px;
+    
+}

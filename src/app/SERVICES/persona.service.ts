@@ -8,9 +8,20 @@ export class PersonaService {
 
   urlUsuario='/usuario'
 
+  urlReset ='/reset'
+  
+  urlPruebas = '/pruebas'
+
   constructor(private http: HttpClient) { }
 
+  pruebas(){
+    return this.http.post(this.urlPruebas,null)
+  }
 
+
+  reset(){
+    return this.http.post(this.urlReset, null);
+  }
 
   getPersonas(){
     return this.http.get(this.url);

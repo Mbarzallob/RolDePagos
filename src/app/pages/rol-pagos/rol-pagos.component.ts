@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Persona, PersonaService } from '../../SERVICES/persona.service';
 
+
 @Component({
   selector: 'app-rol-pagos',
   templateUrl: './rol-pagos.component.html',
@@ -8,7 +9,9 @@ import { Persona, PersonaService } from '../../SERVICES/persona.service';
 })
 export class RolPagosComponent implements OnInit{
   ListaPersonas: Persona[] =[];
-  constructor(private PersonaService: PersonaService) { }
+  constructor(private PersonaService: PersonaService) { 
+   
+  }
   ngOnInit(): void {
 
     

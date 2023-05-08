@@ -3,12 +3,12 @@
     <div class="formulario">
 
         <h2 id="tituloForm">Consultar Usuario</h2>
+        <form>
+            <input name="usuario" [(ngModel)]="usuario" type="text" placeholder="Username">
+            <input name="contrasena" [(ngModel)]="contrasena" type="password" placeholder="Contraseña">
 
-        <input type="text" placeholder="Username">
-        <input type="password" placeholder="Contraseña">
-
-        <input type="submit" id="botonSubir" routerLink="/rolPagos">
-
+            <input (click)="login()" type="submit" id="botonSubir">
+        </form>
 
     </div>
 

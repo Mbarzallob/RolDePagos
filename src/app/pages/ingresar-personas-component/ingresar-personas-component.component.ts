@@ -32,21 +32,19 @@ export class IngresarPersonasComponentComponent implements OnInit {
       }
 
 
-      agregar(){
-        this.PersonaService.addPersonas(this.persona)
-          .toPromise()
-          .then(() => {
-            return this.PersonaService.addUsuario(this.usuario).toPromise();
-          })
-          .then(() => {
-            this.router.navigate(['/']);
-          })
-          .catch(error => {
-            console.error(error);
-          });
-    }
-    
-    
+
+      async agregar() {
+        
+          await this.PersonaService.addPersonas(this.persona).subscribe();
+           this.PersonaService.addUsuario(this.usuario).subscribe();
+          this.router.navigate(['/']);
+          
+
+      }
+
+      prueba(){
+        return this.PersonaService.pruebas().subscribe();
+      }
 
     
 

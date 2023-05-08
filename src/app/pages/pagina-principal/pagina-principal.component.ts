@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Persona, PersonaService } from '../../SERVICES/persona.service';
+import { PersonaService } from '../../SERVICES/persona.service';
 @Component({
   selector: 'app-pagina-principal',
   templateUrl: './pagina-principal.component.html',
@@ -7,23 +7,16 @@ import { Persona, PersonaService } from '../../SERVICES/persona.service';
 })
 export class PaginaPrincipalComponent implements OnInit {
 
-  ListaPersonas: Persona[] =[];
   constructor(private PersonaService: PersonaService) { }
   ngOnInit(): void {
 
-    
-    this.listarPersonas();
-    
+
+
   }
 
-  listarPersonas() {
-    this.PersonaService.getPersonas().subscribe(
-      res => {
-        console.log(res)
-        this.ListaPersonas=<any>res;
-      },
-      err => console.log(err)
-    )
+  reset() {
+    this.PersonaService.reset().subscribe();
   }
+
 }
 
