@@ -1,24 +1,24 @@
-    .rolPagos{
+    .rolPagos {
         margin: 70px 250px 50px 250px;
         background-color: white;
         padding-top: 20px;
         padding-bottom: 20px;
         border-radius: 15px;
-        
+
     }
 
 
-    .top{
+    .top {
         display: inline-block;
         margin-bottom: 20px;
     }
 
-    #left{
+    #left {
         margin-right: 250px;
         margin-left: 100px;
     }
 
-    #fondo{
+    #fondo {
         background-color: rgb(38, 38, 188);
         position: absolute;
         top: 0;
@@ -28,26 +28,28 @@
     }
 
 
-    .informacion{
+    .informacion {
         display: inline-block;
         margin-left: 100px;
         width: 107px;
         margin-top: 0;
     }
 
-    .inf{
+    .inf {
         color: gray;
     }
-    .ingrEgr{
+
+    .ingrEgr {
         display: inline-block;
         margin-right: 107px;
         font-size: 14px;
-        width:86px;
+        width: 86px;
         margin-bottom: 10px;
         margin-top: 0;
 
     }
-    .ingrEgrR{
+
+    .ingrEgrR {
         display: inline-block;
         margin-right: 59px;
         font-size: 14px;
@@ -55,7 +57,8 @@
         margin-bottom: 10px;
         margin-top: 0;
     }
-    .ingrEgrD{
+
+    .ingrEgrD {
         display: inline-block;
         font-size: 14px;
         color: gray;
@@ -64,24 +67,30 @@
 
     }
 
-    .inge{
+    .inge {
         display: flex;
-        
+
         justify-content: space-evenly;
     }
-    .inde{
+
+    .inde {
         width: 250px;
     }
-    .dein{
+
+    .dein {
         text-align: center;
     }
-    .total{
+
+    .total {
         border-top: 2px solid black;
         border-bottom: 2px solid black;
-        padding: 10px 50px;
-
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-bottom: 15px;
+        margin-top: 20px;
+        padding: 0;
     }
-    .total p {
-        margin-top: 10px;
-        margin-bottom: 10px;
+
+    .tablainf {
+        margin: 10px 0px 10px 0px;
     }
