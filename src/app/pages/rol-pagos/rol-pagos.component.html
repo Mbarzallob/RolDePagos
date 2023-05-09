@@ -1,39 +1,54 @@
-<div id="fondoRol">
-
-    <table id="prueba">
-
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Apellido</th>
-                <th>Direccion</th>
-                <th>Telefono</th>
-                <th>Correo</th>
-                <th>CargoId</th>
-
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let persona of ListaPersonas">
-                <td>{{persona.nombre}}</td>
-                <td>{{persona.apellido}}</td>
-                <td>{{persona.direccion}}</td>
-                <td>{{persona.telefono}}</td>
-                <td>{{persona.correo_electronico}}</td>
-                <td>{{persona.id_cargo}}</td>
-            </tr>
-
-
-        </tbody>
-
-    </table>
-
- 
-
-</div> 
-  <div id="rolDePagos">
-        
-            <h4 id="tituloVs">VIMASISTEM CIA. LTDA.</h4>
+<div id="fondo">
+    <div class="rolPagos">
+        <div class="top" id="left">
+            <h4>VIMASISTEM CIA. LTDA.</h4>
             <p>Rol de Pagos Individual</p>
-        
+        </div>
+        <div class="top">
+            <h4>No. {{0}}</h4>
+            <p>Mes: de MAYO de 2029</p>
+        </div>
+        <div>
+            <p class="informacion">EMPLEADO: </p>
+            <p class="informacion inf">Mateo Barzallo</p>
+
+        </div>
+        <div>
+            <p class="informacion">CARGO: </p>
+            <p class="informacion inf">Programador</p>
+
+        </div>
+        <div class="inge">
+            <div class="inde">
+                <p class="dein">INGRESOS</p>
+                <p class="ingrEgr">Sueldo basico</p>
+                <p class="ingrEgrD">$ 340,00</p>
+                <p class="ingrEgr">Horas extra</p>
+                <p class="ingrEgrD">$ 0,00</p>
+                <p class="ingrEgr">Comisiones</p>
+                <p class="ingrEgrD">$ 100,00</p>
+
+            </div>
+            <div class="inde">
+
+                <p class="dein">DESCUENTOS</p>
+                <p class="ingrEgrR">Aportes IESS</p>
+                <p class="ingrEgrD">$ 41,14</p>
+                <p class="ingrEgrR">Préstamos Quirof. IESS</p>
+                <p class="ingrEgrD">$ 0,00</p>
+                <p class="ingrEgrR">Prés. Y Antic. Empresa</p>
+                <p class="ingrEgrD">$ 0,00</p>
+            </div>
+
+
+        </div>
+        <div class="inge total">
+            <p>TOTAL INGRESOS</p>
+            <p>$ 440,00</p>
+            <p>TOTAL DESCUENTOS</p>
+            <p>$ 41,14</p>
+
+        </div>
+
     </div>
+</div>

@@ -1,49 +1,87 @@
-#fondoRol{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background-color: rgb(38, 38, 188);
-    opacity: 0.8;
+    .rolPagos{
+        margin: 70px 250px 50px 250px;
+        background-color: white;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-radius: 15px;
+        
+    }
 
-}
 
-th{
-    color: white;
-    background-color: black;
-    border: solid 2px white;
-    margin: 0;
-    padding: 5px;
-}
+    .top{
+        display: inline-block;
+        margin-bottom: 20px;
+    }
 
-#prueba{
-    position: absolute;
-}
+    #left{
+        margin-right: 250px;
+        margin-left: 100px;
+    }
 
-.tablaRol{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+    #fondo{
+        background-color: rgb(38, 38, 188);
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
 
-#rolDePagos{
-    display: inline;
-    position: absolute;
-    background-color: white;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 200px 400px 200px 400px;
-    border-radius: 20px;
 
-}
+    .informacion{
+        display: inline-block;
+        margin-left: 100px;
+        width: 107px;
+        margin-top: 0;
+    }
 
-#tituloVs{
-position: absolute;
-top: 0;
-left: 30px;
+    .inf{
+        color: gray;
+    }
+    .ingrEgr{
+        display: inline-block;
+        margin-right: 107px;
+        font-size: 14px;
+        width:86px;
+        margin-bottom: 10px;
+        margin-top: 0;
 
-}
+    }
+    .ingrEgrR{
+        display: inline-block;
+        margin-right: 59px;
+        font-size: 14px;
+        width: 142px;
+        margin-bottom: 10px;
+        margin-top: 0;
+    }
+    .ingrEgrD{
+        display: inline-block;
+        font-size: 14px;
+        color: gray;
+        margin-bottom: 10px;
+        margin-top: 0;
 
+    }
+
+    .inge{
+        display: flex;
+        
+        justify-content: space-evenly;
+    }
+    .inde{
+        width: 250px;
+    }
+    .dein{
+        text-align: center;
+    }
+    .total{
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        padding: 10px 50px;
+
+    }
+    .total p {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
