@@ -18,7 +18,7 @@ import { PagosComponent } from './pages/pagos/pagos.component';
     PaginaPrincipalComponent,
     ConsultarUsuarioComponent,
     RolPagosComponent,
-    PagosComponent,
+    PagosComponent
     
   ],
   imports: [

@@ -13,9 +13,9 @@ export class ConsultarUsuarioComponent {
   contrasena =''
   constructor(private LoginServicio: LoginServicioService, private router: Router, private personaService: PersonaService){}
 
-  login() {
+  async login () {
 
-    this.LoginServicio.login(this.usuario, this.contrasena).subscribe(
+    await this.LoginServicio.login(this.usuario, this.contrasena).subscribe(
       response => {
         console.log("Inicio de sesión exitoso");
         this.router.navigate(['/rolPagos'])
@@ -27,8 +27,9 @@ export class ConsultarUsuarioComponent {
     );
 
     this.personaService.rolIndividual(this.usuario).subscribe(
-      respone=>{
-        console.log("Rol individual")
+      response=>{
+        console.log(response)
+        this.personaService.setidpersona(response)
       },
       error =>{
         console.log(error)

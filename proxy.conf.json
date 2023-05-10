@@ -23,5 +23,9 @@
         "target": "http://localhost:3000/api",
         "secure": "false"
     },
+    "/ingresoRol":{
+        "target":"http://localhost:3000/api",
+        "secure":"false"
+    },
     "logLevel": "debug"
 }
