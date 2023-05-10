@@ -12,8 +12,15 @@ export class PersonaService {
   
   urlPruebas = '/pruebas'
 
+  urlRol='/rolIndividual'
+
   constructor(private http: HttpClient) { }
 
+
+  rolIndividual(usuario: string){
+    const options = { params: { usuario } };
+    return this.http.get(this.urlRol, options);
+  }
   pruebas(){
     return this.http.post(this.urlPruebas,null)
   }

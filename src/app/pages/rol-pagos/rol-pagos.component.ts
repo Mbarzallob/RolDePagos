@@ -14,6 +14,7 @@ export class RolPagosComponent implements OnInit {
   ngOnInit(): void {
 
 
+    
 
   }
 

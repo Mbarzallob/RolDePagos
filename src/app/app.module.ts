@@ -9,6 +9,7 @@ import { ConsultarUsuarioComponent } from './pages/consultar-usuario/consultar-u
 import { RolPagosComponent } from './pages/rol-pagos/rol-pagos.component';
 import {HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { PagosComponent } from './pages/pagos/pagos.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { FormsModule } from '@angular/forms';
     PaginaPrincipalComponent,
     ConsultarUsuarioComponent,
     RolPagosComponent,
+    PagosComponent,
     
   ],
   imports: [

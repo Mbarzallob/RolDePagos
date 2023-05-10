@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { LoginServicioService } from 'src/app/SERVICES/login-servicio.service';
+import { PersonaService } from 'src/app/SERVICES/persona.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,9 +11,10 @@ import { Router } from '@angular/router';
 export class ConsultarUsuarioComponent {
   usuario= ''
   contrasena =''
-  constructor(private LoginServicio: LoginServicioService, private router: Router){}
+  constructor(private LoginServicio: LoginServicioService, private router: Router, private personaService: PersonaService){}
 
   login() {
+
     this.LoginServicio.login(this.usuario, this.contrasena).subscribe(
       response => {
         console.log("Inicio de sesión exitoso");
@@ -23,6 +25,18 @@ export class ConsultarUsuarioComponent {
         alert("Usuario o contraseña incorrectos")
       }
     );
+
+    this.personaService.rolIndividual(this.usuario).subscribe(
+      respone=>{
+        console.log("Rol individual")
+      },
+      error =>{
+        console.log(error)
+      }
+    )
+   
   }
+
+  
   
 }

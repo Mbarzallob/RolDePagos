@@ -19,5 +19,9 @@
         "target": "http://localhost:3000/api",
         "secure": "false"
     },
+    "/rolIndividual": {
+        "target": "http://localhost:3000/api",
+        "secure": "false"
+    },
     "logLevel": "debug"
 }
