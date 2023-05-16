@@ -39,5 +39,37 @@
         "target":"http://localhost:3000/api",
         "secure":"false"
     },
+    "/sueldoBasico":{
+        "target":"http://localhost:3000/api",
+        "secure":"false"
+    },    
+    "/horasExtras":{
+        "target":"http://localhost:3000/api",
+        "secure":"false"
+    },   
+    "/comision":{
+        "target":"http://localhost:3000/api",
+        "secure":"false"
+    },    
+    "/iees":{
+        "target":"http://localhost:3000/api",
+        "secure":"false"
+    },    
+    "/anticipos":{
+        "target":"http://localhost:3000/api",
+        "secure":"false"
+    },    
+    "/ingresos":{
+        "target":"http://localhost:3000/api",
+        "secure":"false"
+    },    
+    "/descuentos":{
+        "target":"http://localhost:3000/api",
+        "secure":"false"
+    },    
+    "/salarioN":{
+        "target":"http://localhost:3000/api",
+        "secure":"false"
+    },
     "logLevel": "debug"
 }

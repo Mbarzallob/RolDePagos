@@ -11,41 +11,52 @@ export class PersonaService {
   private idRol!: number;
 
   url = '/api'
-
-
   urlUsuario = '/usuario'
-
   urlReset = '/reset'
-
   urlPruebas = '/pruebas'
-
   urlRol = "/rolIndividual"
-
   urlIngresoRol= '/ingresoRol'
-
   urlRolNombre='/nombre'
-
   urlCargo='/cargo'
-
   urlRolId='/rolId'
+
+  urlSueldo='/sueldoBasico'
+  urlHoras='/horasExtras'
+  urlComision='/comision'
+  urlIess='/iees'
+  urlAnticipos='/anticipos'
+  urlIngresos='/ingresos'
+  urlDescuentos='/descuentos'
+  urlSalarioN='/salarioN'
 
   constructor(private http: HttpClient) { }
 
-  getidrol():number{
-    return this.idRol
+  sueldo(id:number){
+    return this.http.get(this.urlSueldo+"/"+id)
   }
 
-  setidrol(idrol:number){
-    this.idRol=idrol
+  horas(id:number){
+    return this.http.get(this.urlHoras+"/"+id)
   }
-
-  getid(){
-    return this.id;
+  comision(id:number){
+    return this.http.get(this.urlComision+"/"+id)
   }
-  setid(id: number){
-    this.id=id
+  iess(id:number){
+    return this.http.get(this.urlIess+"/"+id)
   }
-
+  anticipos(id:number){
+    return this.http.get(this.urlAnticipos+"/"+id)
+  }
+  ingresos(id:number){
+    return this.http.get(this.urlIngresos+"/"+id)
+  }
+  descuentos(id:number){
+    return this.http.get(this.urlDescuentos+"/"+id)
+  }
+  salarioNeto(id:number){
+    return this.http.get(this.urlSalarioN+"/"+id)
+  }
+  
   cargo(id:number){
     return this.http.get(this.urlCargo+"/"+id)
   }
@@ -98,6 +109,20 @@ export class PersonaService {
 
   addUsuario(usuario: Usuario) {
     return this.http.post(this.urlUsuario, usuario);
+  }
+  getidrol():number{
+    return this.idRol
+  }
+
+  setidrol(idrol:number){
+    this.idRol=idrol
+  }
+
+  getid(){
+    return this.id;
+  }
+  setid(id: number){
+    this.id=id
   }
 
 

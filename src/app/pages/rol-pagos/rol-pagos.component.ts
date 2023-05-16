@@ -17,6 +17,16 @@ export class RolPagosComponent implements OnInit {
   idRolpagos = 0
   nombreCargo = ''
 
+  sueldoBasico=0
+  horasExtras=0
+  comisiones=0
+  iess=0
+  anticipos=0
+  ingresos=0
+  descuentos=0
+  neto=0
+
+
   constructor(private personaService: PersonaService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -25,6 +35,7 @@ export class RolPagosComponent implements OnInit {
   }
 
   rolP() {
+    
     this.personaService.rolNombre(this.idrol).subscribe(
       (res: any) => {
         console.log(res);
@@ -55,9 +66,86 @@ export class RolPagosComponent implements OnInit {
         console.log(res);
 
         this.nombreCargo = res[0].nombre_cargo;
+      },
+      error => {
+        console.log(error);
+      }
+    )
+    this.personaService.sueldo(this.idrol).subscribe(
+      (res: any) => {
+        console.log(res);
 
+        this.sueldoBasico = res[0].sueldo_basico;
+      },
+      error => {
+        console.log(error);
+      }
+    )
+    this.personaService.horas(this.idrol).subscribe(
+      (res: any) => {
+        console.log(res);
 
+        this.horasExtras = res[0].horasextras;
+      },
+      error => {
+        console.log(error);
+      }
+    )
+    this.personaService.comision(this.idrol).subscribe(
+      (res: any) => {
+        console.log(res);
 
+        this.comisiones = res[0].comisiones;
+      },
+      error => {
+        console.log(error);
+      }
+    )
+    this.personaService.iess(this.idrol).subscribe(
+      (res: any) => {
+        console.log(res);
+
+        this.iess = res[0].iees;
+      },
+      error => {
+        console.log(error);
+      }
+    )
+    this.personaService.anticipos(this.idrol).subscribe(
+      (res: any) => {
+        console.log(res);
+
+        this.anticipos = res[0].anticipos;
+      },
+      error => {
+        console.log(error);
+      }
+    )
+    this.personaService.ingresos(this.idrol).subscribe(
+      (res: any) => {
+        console.log(res);
+
+        this.ingresos = res[0].ingresos;
+      },
+      error => {
+        console.log(error);
+      }
+    )
+    this.personaService.descuentos(this.idrol).subscribe(
+      (res: any) => {
+        console.log(res);
+
+        this.descuentos = res[0].descuentos;
+      },
+      error => {
+        console.log(error);
+      }
+    )
+    this.personaService.salarioNeto(this.idrol).subscribe(
+      (res: any) => {
+        console.log(res);
+
+        this.neto = res[0].salarion;
       },
       error => {
         console.log(error);
