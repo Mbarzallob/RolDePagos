@@ -1,10 +1,15 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
+import { HttpClient,HttpParams } from '@angular/common/http'
+
+
 @Injectable({
   providedIn: 'root'
 })
 export class PersonaService {
-  private idpersona: any
+  private id?:number;
+
+  private idRol!: number;
+
   url = '/api'
 
 
@@ -14,28 +19,60 @@ export class PersonaService {
 
   urlPruebas = '/pruebas'
 
-  urlRol = '/rolIndividual'
+  urlRol = "/rolIndividual"
 
   urlIngresoRol= '/ingresoRol'
 
+  urlRolNombre='/nombre'
+
+  urlCargo='/cargo'
+
+  urlRolId='/rolId'
+
   constructor(private http: HttpClient) { }
+
+  getidrol():number{
+    return this.idRol
+  }
+
+  setidrol(idrol:number){
+    this.idRol=idrol
+  }
+
+  getid(){
+    return this.id;
+  }
+  setid(id: number){
+    this.id=id
+  }
+
+  cargo(id:number){
+    return this.http.get(this.urlCargo+"/"+id)
+  }
+  rolId(id:number){
+    return this.http.get(this.urlRolId+"/"+id)
+
+  }
 
   ingresoRol(rol:Rol){
     return this.http.post(this.urlIngresoRol,rol)
   }
 
-  setidpersona(idpersona: any) {
-    this.idpersona = idpersona
+
+
+  rolNombre(id:number){
+    return this.http.get(this.urlRolNombre+"/"+id)
   }
 
-  getidpersona() {
-    return this.idpersona
+
+
+
+  rolIndividual(usuario: string){
+ 
+    return this.http.get(this.urlRol +"/" +usuario)
   }
 
-  rolIndividual(usuario: string) {
-
-    return this.http.post(this.urlRol, { usuario });
-  }
+ 
   pruebas() {
     return this.http.post(this.urlPruebas, null)
   }
@@ -87,3 +124,4 @@ export interface Rol{
   comisiones?:number,
   anticipos?:number
 }
+

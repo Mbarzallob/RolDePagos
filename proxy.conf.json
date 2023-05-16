@@ -27,5 +27,17 @@
         "target":"http://localhost:3000/api",
         "secure":"false"
     },
+    "/nombre":{
+        "target":"http://localhost:3000/api",
+        "secure":"false"
+    },
+    "/cargo":{
+        "target":"http://localhost:3000/api",
+        "secure":"false"
+    },
+    "/rolId":{
+        "target":"http://localhost:3000/api",
+        "secure":"false"
+    },
     "logLevel": "debug"
 }

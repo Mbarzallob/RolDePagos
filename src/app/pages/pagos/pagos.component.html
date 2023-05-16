@@ -4,11 +4,11 @@
 
         <h2 id="tituloForm">Ingreso Pagos</h2>
         <form>
-            <input type="text" placeholder="Horas extras del mes">
-            <input type="text" placeholder="Comisiones">
-            <input type="text" placeholder="Anticipos   ">
+            <input name="horas" [(ngModel)]="rol.horas_extras" type="text" placeholder="Horas extras del mes">
+            <input name="comisiones" [(ngModel)]="rol.comisiones" type="text" placeholder="Comisiones">
+            <input name="anticipos" [(ngModel)]="rol.anticipos" type="text" placeholder="Anticipos   ">
 
-            <input type="submit" id="botonSubirRol">
+            <input type="submit" id="botonSubirRol" (click)="agregarRol()">
         </form>
 
     </div>

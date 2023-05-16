@@ -8,7 +8,7 @@
         <form id="formIngresar">
             <input name="1" [(ngModel)]="persona.nombre" type="text" placeholder="Nombre" id="nombre" >
             <input name="2" [(ngModel)]="persona.apellido" type="text" placeholder="Apellido" id="apellido">
-            <input name="3" [(ngModel)]="usuario.usuario" type="text" placeholder="Username" id="username">
+            <input name="3" [(ngModel)]="usuario.usuario" [(ngModel)]="usuarioI" type="text" placeholder="Username" id="username">
             <input name="4" [(ngModel)]="usuario.contrasena" type="password" placeholder="Contraseña" id="password">
             <input name="5" [(ngModel)]="persona.telefono" type="text" placeholder="Telefono" id="telefono">
             <input name="6" [(ngModel)]="persona.direccion" type="text" placeholder="Direccion" id="direccion">
@@ -21,7 +21,8 @@
                 <option  value="4" >4: Recursos Humanos</option>
                 <option  value="5" >5: Administrador de base de datos</option>
             </select>
-            <input (click)="agregar()" type="submit" id="botonSubir"><!--routerLink="/"-->
+            <input (click)="agregar()" type="submit" class="botonSubir">
+            <input (click)="agregarRol()" type="submit" class="botonSubir" value="Agregar Rol">
         </form>
 
 

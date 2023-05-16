@@ -18,7 +18,7 @@ export class ConsultarUsuarioComponent {
     await this.LoginServicio.login(this.usuario, this.contrasena).subscribe(
       response => {
         console.log("Inicio de sesión exitoso");
-        this.router.navigate(['/rolPagos'])
+        
       },
       error => {
         console.log(error);
@@ -27,11 +27,14 @@ export class ConsultarUsuarioComponent {
     );
 
     this.personaService.rolIndividual(this.usuario).subscribe(
-      response=>{
-        console.log(response)
-        this.personaService.setidpersona(response)
+      Response => {
+        const idPersona = (Response as {id_persona: number}[])[0].id_persona;
+        console.log(idPersona);
+        this.personaService.setidrol(idPersona)
+        this.router.navigate(['/rolPagos', idPersona]);
+
       },
-      error =>{
+      error => {
         console.log(error)
       }
     )

@@ -11,8 +11,9 @@ const routes: Routes = [
   { path: '', component: PaginaPrincipalComponent },
   { path: 'ingresarPersonas', component: IngresarPersonasComponentComponent },
   { path: 'consultaUsuario', component: ConsultarUsuarioComponent},
-  { path: 'rolPagos', component: RolPagosComponent},
-  {path: 'pagos', component: PagosComponent}
+  { path: 'rolPagos/:id', component: RolPagosComponent },
+    { path: 'pagos/:id', component: PagosComponent },
+  
 ];
 
 @NgModule({
